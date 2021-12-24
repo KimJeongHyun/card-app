@@ -4,7 +4,7 @@ import FetchUrl from '../../config/FetchUrl.json';
 
 import './card.scss';
 
-const GET_CARD_COMMENT_DATA = FetchUrl.GET_CARD_COMMENT_DATA;
+const GET_CARD_CONTENT_DATA = FetchUrl.GET_CARD_CONTENT_DATA;
 
 export default function Card({ eachCardData, isWindowReduced }) {
   const [cardContent, setCardContent] = useState([]);
@@ -13,7 +13,7 @@ export default function Card({ eachCardData, isWindowReduced }) {
   const isValid = inputCardContent.length > 0;
 
   useEffect(() => {
-    fetch(GET_CARD_COMMENT_DATA)
+    fetch(GET_CARD_CONTENT_DATA)
       .then(res => res.json())
       .then(data => setCardContent(data[eachCardData.id]));
   }, []);
@@ -33,7 +33,6 @@ export default function Card({ eachCardData, isWindowReduced }) {
   }
 
   function enterToAdd(event) {
-    event.preventDefault();
     return event.key === 'Enter' && isValid ? addCardContent() : null;
   }
 
@@ -50,7 +49,6 @@ export default function Card({ eachCardData, isWindowReduced }) {
         </div>
         <div className="inputBox">
           <input
-            type="text"
             name="inputCardContent"
             className={isWindowReduced ? 'reduce' : ''}
             value={inputCardContent}
