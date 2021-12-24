@@ -1,3 +1,4 @@
 {
-  "GET_CARD_DATA": "http://localhost:3000/data/cardData.json"
+  "GET_CARD_DATA": "http://localhost:3000/data/cardData.json",
+  "GET_CARD_COMMENT_DATA": "http://localhost:3000/data/cardContentData.json"
 }
