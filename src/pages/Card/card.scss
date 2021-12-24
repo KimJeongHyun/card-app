@@ -1,0 +1,54 @@
+.CardArea {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 2px solid #adadad;
+  border-radius: 3px;
+
+  header {
+    align-self: center;
+  }
+
+  .CardInnerArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid #adadad;
+    padding: 5px 0 5px 0;
+    ul {
+      max-height: 115px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: scroll;
+    }
+  }
+  .inputBox {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #adadad;
+    padding: 2.5%;
+    input {
+      width: 80%;
+      height: 25px;
+      padding: 0 0 0 3%;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      width: 15%;
+      color: #5093ff;
+      font-size: 13px;
+      font-weight: 600;
+      background-color: #fff;
+      border: none;
+    }
+  }
+}
